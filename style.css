@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display.swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* This class hides the body until everything is ready */
+body.is-loading {
+    opacity: 0;
+}
+
+/* --- Hero Highlight Styling --- */
+.hero-highlight {
+    display: inline-block;
+    background-color: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #E5E7EB;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    animation: highlight-fade-in 1s ease-out forwards;
+    animation-delay: 0.3s; 
+    opacity: 0;
+}
+
+@keyframes highlight-fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Features Section Styling --- */
+.features-section {
+    animation: highlight-fade-in 1s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+.feature-card {
+    background-color: rgba(31, 41, 55, 0.5); /* Semi-transparent bg-gray-800 */
+    border: 1px solid rgba(75, 85, 99, 0.5); /* Semi-transparent bg-gray-600 */
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(55, 65, 81, 0.7); /* Lighter on hover */
+}
+.icon-bg {
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* --- Featured Courses Card Styling (Home Page) --- */
+.featured-course-card {
+    background-color: #1F2937; /* bg-gray-800 */
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden;
+    border: 1px solid #374151; /* border-gray-700 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featured-course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
+}
+
+/* --- Testimonial Marquee Section Styling --- */
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+}
+.marquee {
+    display: flex;
+    gap: 2rem; /* Space between cards */
+    animation: scroll 20s linear infinite;
+}
+.marquee:hover {
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.testimonial-card-marquee {
+    flex-shrink: 0;
+    width: 380px; /* Width of each card */
+    background-color: #1F2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* --- New About Page Styles --- */
+.about-hero {
+    background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+.value-card {
+    background-color: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
+}
+
+
+/* --- Individual Course Page Styles --- */
+.course-hero-tag {
+    background-color: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #E5E7EB;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.course-stat-card {
+    background-color: rgba(55, 65, 81, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.course-floating-card {
+    background-color: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 0.75rem;
+    position: sticky;
+    top: 100px; /* Adjust this value based on your header height */
+}
+.lesson-item-detailed {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #374151;
+    border-radius: 0.5rem;
+    border: 1px solid #4b5563;
+}
+.lesson-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    font-weight: bold;
+    color: #c4b5fd;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+.lesson-start-btn-detailed {
+    color: #a78bfa;
+    font-weight: 600;
+    margin-left: 1rem;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+.lesson-start-btn-detailed:hover {
+    color: #c4b5fd;
+}
+.sidebar-card {
+    background-color: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+.sidebar-card-cta {
+    background: linear-gradient(45deg, #5b21b6, #8b5cf6);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/* --- CORRECTED Double Panel Page Transition --- */
+#transition-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    pointer-events: none;
+}
+
+.transition-panel {
+    width: 50%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.panel-1 {
+    background-color: #111827;
+    transform: translateX(-100%);
+}
+.panel-2 {
+    background-color: #8B5CF6;
+    transform: translateX(100%);
+}
+
+body.is-loading .panel-1,
+body.is-loading .panel-2,
+body.is-transitioning .panel-1,
+body.is-transitioning .panel-2 {
+    transform: translateX(0);
+}
+
+.transition-text {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.panel-1 .transition-text { color: #8B5CF6; }
+.panel-2 .transition-text { color: #111827; }
+
+body.is-transitioning .transition-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+/* --- Universal Popup Styles --- */
+#contact-popup,
+#enroll-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+}
+#contact-popup.is-visible,
+#enroll-popup.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+.popup-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 24, 39, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.popup-content {
+    position: relative;
+    z-index: 1;
+    background-color: #1F2937;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 32rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#contact-popup.is-visible .popup-content,
+#enroll-popup.is-visible .popup-content {
+    transform: scale(1);
+}
+.close-popup-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.close-popup-btn:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* --- Course Card (Courses Page) --- */
+.course-card { 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+.course-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15); 
+}
+
+/* --- NEW Instructor Hover Image --- */
+#cursor-image-container {
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: scale(0.8) translate(-50%, -50%);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+#cursor-image-container.is-visible {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+}

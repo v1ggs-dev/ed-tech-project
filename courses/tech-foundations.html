@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Foundations - Learnify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="https://us-east-1.tixte.net/uploads/v1ggs.needs.rest/favicon.png" type="image/png">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- This container handles the page transition effect -->
+    <div id="transition-container">
+        <div class="transition-panel panel-1"><span id="left-panel-text" class="transition-text"></span></div>
+        <div class="transition-panel panel-2"><span id="right-panel-text" class="transition-text"></span></div>
+    </div>
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../home.html" data-left-text="WELCOME" data-right-text="HOME" class="text-2xl font-bold text-white">Learn<span class="text-purple-500">ify</span></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="../home.html" data-left-text="WELCOME" data-right-text="HOME" class="hover:text-purple-400 transition duration-300">Home</a>
+                <a href="../about.html" data-left-text="OUR" data-right-text="MISSION" class="hover:text-purple-400 transition duration-300">About</a>
+                <a href="../courses.html" data-left-text="EXPLORE" data-right-text="COURSES" class="text-purple-400 font-semibold">Courses</a>
+                <a href="../instructors.html" data-left-text="MEET THE" data-right-text="EXPERTS" class="hover:text-purple-400 transition duration-300">Instructors</a>
+                <a href="#" id="contact-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Contact Us</a>
+            </div>
+            <button id="nav-toggle" class="md:hidden text-gray-200 focus:outline-none"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="nav-menu" class="hidden md:hidden bg-gray-800">
+            <a href="../home.html" data-left-text="WELCOME" data-right-text="HOME" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
+            <a href="../about.html" data-left-text="OUR" data-right-text="MISSION" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+            <a href="../courses.html" data-left-text="EXPLORE" data-right-text="COURSES" class="block py-2 px-4 text-sm hover:bg-gray-700">Courses</a>
+            <a href="../instructors.html" data-left-text="MEET THE" data-right-text="EXPERTS" class="block py-2 px-4 text-sm hover:bg-gray-700">Instructors</a>
+            <a href="#" id="contact-btn-mobile" class="block py-2 px-4 text-sm hover:bg-gray-700">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main>
+        <!-- Course Hero Section -->
+        <section class="course-hero-section bg-gray-800/40 pt-16 pb-24">
+            <div class="container mx-auto px-6">
+                <div class="lg:flex lg:space-x-12">
+                    <!-- Left Column -->
+                    <div class="lg:w-2/3">
+                        <div class="hero-highlight mb-4">Core Skills for Beginners</div>
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">Tech Foundations</h1>
+                        <p class="mt-4 text-lg text-gray-300 max-w-2xl">Build a solid base in modern technology stacks, from fundamental hardware principles to advanced software architecture.</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 text-center">
+                            <div class="course-stat-card"><div class="text-2xl">⭐️</div><div>4.8 <span class="text-gray-400 text-sm">(250 reviews)</span></div></div>
+                            <div class="course-stat-card"><div class="text-2xl">⏰</div><div>18 <span class="text-gray-400 text-sm">Hours</span></div></div>
+                            <div class="course-stat-card"><div class="text-2xl">📚</div><div>8 <span class="text-gray-400 text-sm">Lessons</span></div></div>
+                            <div class="course-stat-card"><div class="text-2xl">📈</div><div>Beginner <span class="text-gray-400 text-sm">Level</span></div></div>
+                        </div>
+                        <div class="mt-12 p-6 bg-gray-800 rounded-lg flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Dr. Evelyn Reed" class="w-16 h-16 rounded-full">
+                            <div class="ml-4">
+                                <p class="font-semibold text-white">YOUR EXPERT INSTRUCTOR</p>
+                                <p class="text-purple-400 font-bold text-lg">Dr. Evelyn Reed</p>
+                                <p class="text-gray-400 text-sm">Accomplished tech lead with 15+ years of industry experience.</p>
+                            </div>
+                        </div>
+                        <div class="mt-12">
+                            <h4 class="font-bold text-white text-xl mb-4">This course includes:</h4>
+                            <div class="flex flex-wrap gap-x-10 gap-y-4 text-gray-300">
+                                <div class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>18 hours of video</span></div>
+                                <div class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>8 lessons</span></div>
+                                <div class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Exercises & projects</span></div>
+                                <div class="flex items-center"><svg class="w-5 h-5 text-purple-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Full lifetime access</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column (Floating Card) -->
+                    <div class="lg:w-1/3 mt-12 lg:mt-0">
+                        <div id="enroll-card" class="course-floating-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop" alt="Tech Foundations" class="rounded-t-lg w-full h-56 object-cover">
+                            <div class="p-6">
+                                <span class="text-3xl font-bold text-white">1599 INR</span>
+                                <!-- UPDATED: Added ID to this button -->
+                                <a href="#" id="enroll-btn" class="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 mt-4 rounded-lg transition">Enroll Now</a>
+                                <p class="text-center text-gray-400 text-sm mt-4">30-Day Money-Back Guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Details Section -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+                    <!-- Left Column: Course Content -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center justify-between mb-4">
+                             <h2 class="text-3xl font-bold text-white flex items-center"><svg class="w-7 h-7 mr-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>Course Content</h2>
+                            <div class="flex space-x-4 text-sm text-gray-400"><span>8 lessons</span><span>18 hours total</span></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="lesson-item-detailed"><div class="lesson-number">1</div><div class="flex-grow"><h3 class="font-bold text-white">Introduction to Computer Architecture</h3><p class="text-sm text-gray-400 mt-1">Core concepts of hardware and system design.</p></div><span class="text-sm text-gray-400">2.5 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">2</div><div class="flex-grow"><h3 class="font-bold text-white">Operating Systems Fundamentals</h3><p class="text-sm text-gray-400 mt-1">Learn about process management and memory allocation.</p></div><span class="text-sm text-gray-400">3 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">3</div><div class="flex-grow"><h3 class="font-bold text-white">Software Development Lifecycles</h3><p class="text-sm text-gray-400 mt-1">From Waterfall to Agile methodologies.</p></div><span class="text-sm text-gray-400">2 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">4</div><div class="flex-grow"><h3 class="font-bold text-white">Networking Basics (TCP/IP, DNS)</h3><p class="text-sm text-gray-400 mt-1">Understand how the internet works.</p></div><span class="text-sm text-gray-400">2.5 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">5</div><div class="flex-grow"><h3 class="font-bold text-white">Introduction to Databases</h3><p class="text-sm text-gray-400 mt-1">Exploring SQL and NoSQL concepts.</p></div><span class="text-sm text-gray-400">2.5 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">6</div><div class="flex-grow"><h3 class="font-bold text-white">Cloud Computing Concepts</h3><p class="text-sm text-gray-400 mt-1">IaaS, PaaS, SaaS, and serverless architecture.</p></div><span class="text-sm text-gray-400">2 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">7</div><div class="flex-grow"><h3 class="font-bold text-white">Version Control with Git</h3><p class="text-sm text-gray-400 mt-1">Collaborate on code with the industry-standard tool.</p></div><span class="text-sm text-gray-400">1.5 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                            <div class="lesson-item-detailed"><div class="lesson-number">8</div><div class="flex-grow"><h3 class="font-bold text-white">Final Project: Build a Simple Web Server</h3><p class="text-sm text-gray-400 mt-1">Apply all learned concepts in a hands-on project.</p></div><span class="text-sm text-gray-400">2 hours</span><a href="#" class="lesson-start-btn-detailed">Start Lesson &rarr;</a></div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Sidebar -->
+                    <div class="lg:col-span-1 space-y-8 mt-12 lg:mt-0">
+                        <div class="sidebar-card">
+                            <div class="flex items-center"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Dr. Evelyn Reed" class="w-14 h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-lg">Dr. Evelyn Reed</p><p class="text-sm text-purple-400">Lead Instructor</p></div></div>
+                            <p class="text-sm text-gray-400 mt-4">Accomplished tech lead with 15+ years of industry experience in software architecture and system design.</p>
+                        </div>
+                        <div class="sidebar-card">
+                            <h3 class="text-lg font-bold text-white flex items-center mb-4"><svg class="w-6 h-6 mr-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>What you'll learn</h3>
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li class="flex"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Master industry-standard skills in tech.</span></li>
+                                <li class="flex"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Build real-world experience through projects.</span></li>
+                                <li class="flex"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Learn from an industry leader.</span></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-card-cta">
+                            <h3 class="text-lg font-bold text-white">Ready to dive in?</h3>
+                            <p class="text-sm text-purple-200 mt-1">Start learning today and advance your skills.</p>
+                            <a href="#" id="scroll-to-enroll-btn" class="block w-full text-center bg-white hover:bg-gray-200 text-purple-700 font-bold py-3 mt-4 rounded-lg transition">Start Learning Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Universal Contact Us Popup -->
+    <div id="contact-popup">
+        <div class="popup-backdrop"></div>
+        <div class="popup-content">
+            <button class="close-popup-btn"><svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+            <div class="text-center mb-6"><h2 class="text-2xl font-bold text-white">Contact Us</h2><p class="text-gray-400 mt-1">We'd love to hear from you!</p></div>
+            <form action="#" method="POST"><div class="space-y-4"><div><label for="popup-name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label><input type="text" id="popup-name" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></div><div><label for="popup-email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label><input type="email" id="popup-email" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></div><div><label for="popup-subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label><input type="text" id="popup-subject" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></div><div><label for="popup-message" class="block text-sm font-medium text-gray-300 mb-1">Message</label><textarea id="popup-message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></textarea></div></div><div class="mt-6"><button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Send Message</button></div></form>
+        </div>
+    </div>
+
+    <!-- Enroll Now Popup -->
+    <div id="enroll-popup">
+        <div class="popup-backdrop"></div>
+        <div class="popup-content text-center">
+            <button class="close-popup-btn">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-white">Coming Soon!</h2>
+            <p class="text-gray-400 mt-2">We are enabling this feature soon. Please check back later!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900"><div class="container mx-auto px-6 py-8 text-center text-gray-400"><p>&copy; 2025 Learnify. All Rights Reserved.</p></div></footer>
+    
+    <!-- JavaScript file -->
+    <script src="../script.js"></script>
+</body>
+</html>

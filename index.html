@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | Learnify</title>
+    <link rel="stylesheet" href="loader.css">
+    <link rel="icon" href="https://us-east-1.tixte.net/uploads/v1ggs.needs.rest/favicon.png" type="image/png">
+</head>
+<body>
+
+    <div class="text-left">
+        <h1 id="line1" class="loader-line">
+            <span id="percentage">0</span> - 100 YOUR
+        </h1>
+        <h1 id="line2" class="loader-line">
+            WEB EXPERIENCE
+        </h1>
+        <h1 id="line3" class="loader-line">
+            IS LOADING RIGHT <span id="now">NOW</span>
+        </h1>
+        <p id="wait-text">Please wait a few seconds.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const percentageEl = document.getElementById('percentage');
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+            const waitText = document.getElementById('wait-text');
+
+            let currentPercentage = 0;
+            const targetPercentage = 100;
+            const totalDuration = 2000; // 2 seconds for the counter
+            const intervalTime = totalDuration / targetPercentage;
+
+            // Reveal lines sequentially
+            setTimeout(() => line1.style.opacity = 1, 100);
+            setTimeout(() => line2.style.opacity = 1, 300);
+            setTimeout(() => line3.style.opacity = 1, 500);
+            setTimeout(() => waitText.style.opacity = 1, 800);
+
+            const counterInterval = setInterval(() => {
+                if (currentPercentage >= targetPercentage) {
+                    clearInterval(counterInterval);
+                    percentageEl.textContent = targetPercentage;
+
+                    // Set timeout for redirecting to the main page
+                    setTimeout(() => {
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = 'home.html';
+                        }, 500); // Match fade-out duration
+                    }, 1500); // Wait 1.5 seconds after counter finishes
+
+                } else {
+                    currentPercentage++;
+                    percentageEl.textContent = currentPercentage;
+                }
+            }, intervalTime);
+        });
+    </script>
+
+</body>
+</html>

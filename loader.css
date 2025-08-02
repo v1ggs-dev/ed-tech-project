@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    color: #E5E7EB;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.loader-line {
+    font-size: clamp(2.5rem, 9vw, 5.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#line1 {
+    color: #9CA3AF;
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-weight: 700;
+}
+
+#line2 {
+    color: #FFFFFF;
+}
+
+#line3 {
+    color: #9CA3AF;
+}
+
+#now {
+    display: inline-block;
+    font-weight: 800;
+    animation: now-variation-flash 1.5s infinite;
+}
+
+#wait-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: #6B7280;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out 1s;
+    margin-top: 2rem;
+}
+
+@keyframes now-variation-flash {
+    0% {
+        color: #8B5CF6;
+        text-shadow: none;
+        transform: skew(0);
+    }
+    25% {
+        color: #C4B5FD;
+        text-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+        transform: skew(-8deg);
+    }
+    50% {
+        color: #FFFFFF;
+        text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+        transform: skew(8deg);
+    }
+    75% {
+        color: #C4B5FD;
+        text-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+        transform: skew(-8deg);
+    }
+    100% {
+        color: #8B5CF6;
+        text-shadow: none;
+        transform: skew(0);
+    }
+}

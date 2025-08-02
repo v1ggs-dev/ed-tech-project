@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructors - Learnify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://us-east-1.tixte.net/uploads/v1ggs.needs.rest/favicon.png" type="image/png">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- This container handles the page transition effect -->
+    <div id="transition-container">
+        <div class="transition-panel panel-1"><span id="left-panel-text" class="transition-text"></span></div>
+        <div class="transition-panel panel-2"><span id="right-panel-text" class="transition-text"></span></div>
+    </div>
+    
+    <!-- New container for the cursor-following image -->
+    <div id="cursor-image-container"></div>
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="home.html" data-left-text="WELCOME" data-right-text="HOME" class="text-2xl font-bold text-white">Learn<span class="text-purple-500">ify</span></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="home.html" data-left-text="WELCOME" data-right-text="HOME" class="hover:text-purple-400 transition duration-300">Home</a>
+                <a href="about.html" data-left-text="OUR" data-right-text="MISSION" class="hover:text-purple-400 transition duration-300">About</a>
+                <a href="courses.html" data-left-text="EXPLORE" data-right-text="COURSES" class="hover:text-purple-400 transition duration-300">Courses</a>
+                <a href="instructors.html" data-left-text="MEET THE" data-right-text="EXPERTS" class="text-purple-400 font-semibold">Instructors</a>
+                <a href="#" id="contact-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Contact Us</a>
+            </div>
+            <button id="nav-toggle" class="md:hidden text-gray-200 focus:outline-none"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="nav-menu" class="hidden md:hidden bg-gray-800">
+            <a href="home.html" data-left-text="WELCOME" data-right-text="HOME" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
+            <a href="about.html" data-left-text="OUR" data-right-text="MISSION" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+            <a href="courses.html" data-left-text="EXPLORE" data-right-text="COURSES" class="block py-2 px-4 text-sm hover:bg-gray-700">Courses</a>
+            <a href="instructors.html" data-left-text="MEET THE" data-right-text="EXPERTS" class="block py-2 px-4 text-sm hover:bg-gray-700">Instructors</a>
+            <a href="#" id="contact-btn-mobile" class="block py-2 px-4 text-sm hover:bg-gray-700">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main class="py-20 min-h-screen">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">Meet Our Expert Instructors</h1>
+                <p class="text-lg text-gray-400 mt-3">Learn from industry leaders who are passionate about teaching.</p>
+            </div>
+            
+            <!-- Updated Layout: Centered list -->
+            <div class="max-w-2xl mx-auto">
+                <ul id="team-list" class="space-y-1">
+                    <li data-image="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" class="p-6 text-2xl font-bold border-l-4 border-gray-700 hover:border-purple-500 hover:bg-gray-800/50 rounded-r-lg cursor-pointer transition-all duration-300">Shradha Khapra<span class="block text-sm font-normal text-gray-400">Co-Founder & CEO</span></li>
+                    <li data-image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" class="p-6 text-2xl font-bold border-l-4 border-gray-700 hover:border-purple-500 hover:bg-gray-800/50 rounded-r-lg cursor-pointer transition-all duration-300">Ritika Tiwari<span class="block text-sm font-normal text-gray-400">Lead AI Engineer</span></li>
+                    <li data-image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" class="p-6 text-2xl font-bold border-l-4 border-gray-700 hover:border-purple-500 hover:bg-gray-800/50 rounded-r-lg cursor-pointer transition-all duration-300">Anil Sharma<span class="block text-sm font-normal text-gray-400">Chief Technology Officer</span></li>
+                    <li data-image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&auto=format&fit=crop" class="p-6 text-2xl font-bold border-l-4 border-gray-700 hover:border-purple-500 hover:bg-gray-800/50 rounded-r-lg cursor-pointer transition-all duration-300">Jeetu Mishra<span class="block text-sm font-normal text-gray-400">Senior DevOps Architect</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Universal Contact Us Popup -->
+    <div id="contact-popup">
+        <div class="popup-backdrop"></div>
+        <div class="popup-content">
+            <button class="close-popup-btn"><svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+            <div class="text-center mb-6"><h2 class="text-2xl font-bold text-white">Contact Us</h2><p class="text-gray-400 mt-1">We'd love to hear from you!</p></div>
+            <form action="#" method="POST"><div class="space-y-4"><div><label for="popup-name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label><input type="text" id="popup-name" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></div><div><label for="popup-email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label><input type="email" id="popup-email" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></div><div><label for="popup-subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label><input type="text" id="popup-subject" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></div><div><label for="popup-message" class="block text-sm font-medium text-gray-300 mb-1">Message</label><textarea id="popup-message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></textarea></div></div><div class="mt-6"><button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Send Message</button></div></form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900"><div class="container mx-auto px-6 py-8 text-center text-gray-400"><p>&copy; 2025 Learnify. All Rights Reserved.</p></div></footer>
+    
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
