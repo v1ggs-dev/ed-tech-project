@@ -52,4 +52,4 @@ This project was developed collaboratively, incorporating user feedback and desi
 
 ## 🙏 Acknowledgements
 
-This project was built by me and [@khushi2503](https://github.com/khushii2503) ** for the **PixxelHack Webathon**, organized by the **ACM-TCET student chapter**. It represents our passion for creating high-quality, modern web experiences and our dedication to the spirit of competition and innovation. 
+This project was built by me and [@khushi2503](https://github.com/khushii2503) for the **PixxelHack Webathon**, organized by the **ACM-TCET student chapter**. It represents our passion for creating high-quality, modern web experiences and our dedication to the spirit of competition and innovation. 
