@@ -48,6 +48,8 @@ This project was developed collaboratively, incorporating user feedback and desi
 
 ---
 
+## 🙏 Ending Notes
+
 ## 🙏 Acknowledgements
 
-This project was a highly collaborative effort. A big thank you for the continuous feedback, creative ideas, and clear vision that shaped the final product. It was a pleasure to build this with you!
+This project was built by me and [@khushi2503](https://github.com/khushii2503) ** for the **PixxelHack Webathon**, organized by the **ACM-TCET student chapter**. It represents our passion for creating high-quality, modern web experiences and our dedication to the spirit of competition and innovation. 
